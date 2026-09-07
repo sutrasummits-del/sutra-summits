@@ -1,88 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SUTRA SUMMITS — Debate, Diplomacy & Leadership</title>
+<title>Sutra Summits | Debate • Diplomacy • Leadership</title>
 
-<meta name="description"
-content="Sutra Summits is a student-led platform for Model United Nations, debate, diplomacy, leadership, critical thinking and meaningful discussion.">
+<meta name="description" content="Sutra Summits is a student-led platform for debate, diplomacy, Model United Nations, leadership and meaningful discussion.">
 
-<meta name="keywords"
-content="Sutra Summits, SUTRA MUN, MUN India, Model United Nations India, student MUN, debate competition, MUN conference, diplomacy, debate, leadership">
-
-<meta name="author" content="Sutra Summits">
-
-<meta property="og:site_name" content="Sutra Summits">
-<meta property="og:title" content="Sutra Summits — Debate, Diplomacy & Leadership">
-<meta property="og:description"
-content="A student-led platform for debate, diplomacy, leadership and meaningful discussion.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sutra-summits.vercel.app/">
-
-<meta name="theme-color" content="#080d18">
-
-<meta name="google-site-verification"
-content="A4QSv9OUty88qHCiNmmScTEHMHNTPFhLvuozlARPUbY">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Sutra Summits",
-  "alternateName":"SUTRA SUMMITS",
-  "url":"https://sutra-summits.vercel.app/",
-  "description":"Sutra Summits is a student-led debate and Model United Nations organization creating platforms for debate, diplomacy, leadership, critical thinking and meaningful discussion.",
-  "founder":[
-    {
-      "@type":"Person",
-      "name":"Shivansh Dixit"
-    },
-    {
-      "@type":"Person",
-      "name":"Saanvi Thakur"
-    }
-  ]
-}
-</script>
+<meta name="theme-color" content="#070916">
 
 <style>
 
-/* =========================================================
-   ROOT
-========================================================= */
-
-:root{
-  --bg:#060a12;
-  --bg2:#0a1020;
-  --card:rgba(16,25,40,.72);
-  --card2:rgba(20,31,49,.78);
-
-  --text:#f7f3ea;
-  --muted:#a6b0c0;
-
-  --gold:#d9b86c;
-  --gold2:#f4dfa4;
-  --blue:#526fa8;
-  --purple:#765caa;
-
-  --line:rgba(255,255,255,.10);
-  --lineGold:rgba(217,184,108,.30);
-
-  --shadow:0 25px 80px rgba(0,0,0,.35);
-}
-
-/* =========================================================
+/* =========================
    RESET
-========================================================= */
+========================= */
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -90,68 +27,10 @@ html{
 }
 
 body{
-  background:
-    radial-gradient(
-      circle at 15% 15%,
-      rgba(217,184,108,.12),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(82,111,168,.16),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 50% 80%,
-      rgba(118,92,170,.09),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #050810,
-      #080d18 45%,
-      #0a101d
-    );
-
-  color:var(--text);
-
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-  line-height:1.6;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#f7f4ed;
+  background:#070916;
   overflow-x:hidden;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
-
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,.018) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.018) 1px,
-      transparent 1px
-    );
-
-  background-size:70px 70px;
-
-  mask-image:linear-gradient(
-    to bottom,
-    black,
-    transparent 80%
-  );
 }
 
 a{
@@ -159,65 +38,93 @@ a{
   text-decoration:none;
 }
 
-::selection{
-  background:var(--gold);
-  color:#050505;
+button{
+  font:inherit;
 }
 
-/* =========================================================
-   AMBIENT LIGHTS
-========================================================= */
+/* =========================
+   BACKGROUND
+========================= */
 
-.ambient{
+body{
+  background:
+    radial-gradient(circle at 15% 15%, rgba(204,170,91,.14), transparent 28%),
+    radial-gradient(circle at 85% 25%, rgba(74,91,180,.16), transparent 30%),
+    radial-gradient(circle at 55% 90%, rgba(124,74,157,.12), transparent 30%),
+    #070916;
+}
+
+.background{
   position:fixed;
-  width:420px;
-  height:420px;
-  border-radius:50%;
-  filter:blur(90px);
+  inset:0;
   pointer-events:none;
-  opacity:.12;
-  z-index:-1;
+  z-index:-2;
 }
 
-.ambient.one{
-  background:#d9b86c;
-  top:5%;
-  left:-180px;
+.orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(70px);
+  opacity:.16;
+  animation:float 12s ease-in-out infinite;
 }
 
-.ambient.two{
-  background:#526fa8;
-  top:45%;
-  right:-180px;
+.orb1{
+  width:300px;
+  height:300px;
+  background:#cbaa59;
+  top:8%;
+  left:-100px;
 }
 
-.ambient.three{
-  background:#765caa;
-  bottom:0;
+.orb2{
+  width:350px;
+  height:350px;
+  background:#536ac0;
+  right:-120px;
+  top:35%;
+  animation-delay:2s;
+}
+
+.orb3{
+  width:280px;
+  height:280px;
+  background:#8b56a7;
   left:35%;
+  bottom:-120px;
+  animation-delay:4s;
 }
 
-/* =========================================================
-   NAV
-========================================================= */
+@keyframes float{
+  0%,100%{
+    transform:translate(0,0);
+  }
+  50%{
+    transform:translate(25px,-30px);
+  }
+}
 
-.nav{
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
   z-index:1000;
 
-  background:rgba(5,9,16,.68);
-  backdrop-filter:blur(22px);
+  background:rgba(7,9,22,.72);
+  backdrop-filter:blur(20px);
 
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav-inner{
-  max-width:1200px;
+  width:min(1180px,calc(100% - 40px));
   margin:auto;
-  padding:17px 25px;
+
+  height:72px;
 
   display:flex;
   align-items:center;
@@ -226,128 +133,89 @@ a{
 
 .logo{
   font-size:16px;
-  font-weight:950;
-  letter-spacing:.18em;
+  font-weight:900;
+  letter-spacing:.2em;
 }
 
 .logo span{
-  color:var(--gold);
+  color:#d8b96b;
 }
 
 .nav-links{
   display:flex;
   gap:28px;
 
-  color:#9da8b7;
-
+  color:#aab0c0;
   font-size:12px;
-  font-weight:650;
 }
 
 .nav-links a{
-  position:relative;
-  transition:.25s ease;
-}
-
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-7px;
-
-  width:0;
-  height:1px;
-
-  background:var(--gold);
-
-  transition:.25s ease;
+  transition:.25s;
 }
 
 .nav-links a:hover{
-  color:var(--gold2);
+  color:#e5cb8b;
 }
 
-.nav-links a:hover::after{
-  width:100%;
-}
+.nav-button{
+  border:1px solid rgba(216,185,107,.4);
+  border-radius:50px;
+  padding:9px 16px;
 
-.nav-cta{
-  padding:9px 15px;
-
-  border:1px solid rgba(217,184,108,.35);
-  border-radius:999px;
-
-  color:var(--gold2);
-
+  color:#e8d398;
   font-size:11px;
-  font-weight:850;
-  letter-spacing:.08em;
+  font-weight:800;
 }
 
-@media(max-width:850px){
-
+@media(max-width:800px){
   .nav-links{
     display:none;
   }
-
-  .nav-cta{
-    display:none;
-  }
-
 }
 
-/* =========================================================
+/* =========================
    COMMON
-========================================================= */
+========================= */
 
 .container{
-  width:min(1160px,calc(100% - 42px));
+  width:min(1120px,calc(100% - 40px));
   margin:auto;
 }
 
 section{
   padding:120px 0;
-  position:relative;
 }
 
-.eyebrow{
-  color:var(--gold);
-
-  text-transform:uppercase;
-  letter-spacing:.25em;
-
+.label{
+  color:#d8b96b;
   font-size:10px;
   font-weight:900;
+  letter-spacing:.25em;
+  text-transform:uppercase;
 }
 
-.section-title{
-  font-size:clamp(42px,6vw,76px);
-  line-height:.95;
-
-  letter-spacing:-.065em;
-
-  margin:14px 0 24px;
+.title{
+  font-size:clamp(42px,7vw,82px);
+  line-height:.9;
+  letter-spacing:-.07em;
+  margin-top:15px;
 }
 
-.section-title span{
-  color:var(--gold);
+.title span{
+  color:#d8b96b;
 }
 
-.section-description{
-  max-width:730px;
-
-  color:var(--muted);
-
+.description{
+  color:#a8afbd;
   font-size:17px;
+  line-height:1.8;
+  max-width:700px;
+  margin-top:25px;
 }
 
-.gold{
-  color:var(--gold);
-}
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
   min-height:100vh;
@@ -355,130 +223,65 @@ section{
   display:flex;
   align-items:center;
 
-  padding:150px 0 110px;
-
   position:relative;
   overflow:hidden;
-}
 
-.hero-orbit{
-  position:absolute;
-
-  width:650px;
-  height:650px;
-
-  right:-190px;
-  top:80px;
-
-  border:1px solid rgba(217,184,108,.11);
-  border-radius:50%;
-
-  box-shadow:
-    0 0 0 80px rgba(217,184,108,.025),
-    0 0 0 160px rgba(217,184,108,.018);
-}
-
-.hero-orbit::before{
-  content:"";
-
-  position:absolute;
-
-  width:13px;
-  height:13px;
-
-  border-radius:50%;
-
-  background:var(--gold);
-
-  top:100px;
-  left:70px;
-
-  box-shadow:
-    0 0 35px rgba(217,184,108,.9);
-}
-
-.hero-orbit::after{
-  content:"";
-
-  position:absolute;
-
-  width:7px;
-  height:7px;
-
-  border-radius:50%;
-
-  background:#8097c5;
-
-  bottom:80px;
-  right:110px;
-
-  box-shadow:
-    0 0 25px rgba(82,111,168,.9);
+  padding-top:100px;
 }
 
 .hero-content{
   position:relative;
-  z-index:2;
+  z-index:3;
 }
 
-.hero-label{
+.hero-badge{
   display:inline-flex;
   align-items:center;
-  gap:10px;
+  gap:9px;
+
+  border:1px solid rgba(216,185,107,.3);
+  background:rgba(216,185,107,.05);
 
   padding:9px 15px;
+  border-radius:50px;
 
-  border:1px solid rgba(217,184,108,.27);
-  border-radius:999px;
-
-  background:rgba(217,184,108,.035);
-
-  color:var(--gold2);
-
+  color:#e5cf96;
   font-size:10px;
-  font-weight:850;
-  letter-spacing:.17em;
-
-  margin-bottom:28px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
 }
 
-.hero-label::before{
-  content:"";
-
+.hero-badge i{
   width:6px;
   height:6px;
-
   border-radius:50%;
-
-  background:var(--gold);
-
-  box-shadow:0 0 14px var(--gold);
+  background:#d8b96b;
+  box-shadow:0 0 15px #d8b96b;
 }
 
 .hero h1{
-  font-size:clamp(60px,10vw,130px);
-
-  line-height:.84;
-
-  letter-spacing:-.08em;
+  font-size:clamp(65px,11vw,140px);
+  line-height:.82;
+  letter-spacing:-.085em;
 
   max-width:950px;
 
-  margin-bottom:36px;
+  margin:35px 0;
 }
 
-.hero h1 span{
-  color:var(--gold);
+.hero h1 .gold{
+  color:#d8b96b;
 }
 
-.hero-text{
-  max-width:660px;
+.hero-sub{
+  color:#aeb5c4;
+  max-width:640px;
 
-  color:var(--muted);
+  font-size:19px;
+  line-height:1.7;
 
-  font-size:20px;
-
-  margin-bottom:34px;
+  margin-bottom:32px;
 }
 
 .buttons{
@@ -488,187 +291,181 @@ section{
 }
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:14px 22px;
+  padding:14px 21px;
 
   border-radius:9px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f0d99b,
-      #cba85d
-    );
+  background:linear-gradient(
+    135deg,
+    #edd79b,
+    #c49e4e
+  );
 
-  color:#11100d;
+  color:#111;
 
+  font-size:12px;
   font-weight:900;
-  font-size:13px;
 
-  box-shadow:
-    0 10px 35px rgba(217,184,108,.12);
-
-  transition:.3s ease;
+  transition:.3s;
 }
 
 .btn:hover{
   transform:translateY(-4px);
-
-  box-shadow:
-    0 16px 45px rgba(217,184,108,.22);
+  box-shadow:0 15px 40px rgba(216,185,107,.2);
 }
 
-.btn-outline{
-  background:rgba(255,255,255,.025);
+.btn.secondary{
+  background:rgba(255,255,255,.035);
+  color:#f5f1e9;
 
-  color:var(--text);
-
-  border:1px solid var(--line);
-
-  box-shadow:none;
+  border:1px solid rgba(255,255,255,.1);
 }
 
-.btn-outline:hover{
-  border-color:var(--lineGold);
-  background:rgba(217,184,108,.05);
+/* HERO ORBIT */
+
+.hero-art{
+  position:absolute;
+
+  right:-130px;
+  top:50%;
+
+  width:600px;
+  height:600px;
+
+  transform:translateY(-50%);
+
+  border:1px solid rgba(216,185,107,.11);
+  border-radius:50%;
 }
 
-/* HERO STATS */
+.hero-art:before{
+  content:"";
 
-.hero-stats{
-  display:flex;
-  gap:45px;
+  position:absolute;
+  inset:65px;
 
-  margin-top:65px;
-
-  padding-top:25px;
-
-  border-top:1px solid var(--line);
-
-  max-width:700px;
+  border:1px solid rgba(92,110,191,.15);
+  border-radius:50%;
 }
 
-.hero-stat strong{
-  display:block;
+.hero-art:after{
+  content:"";
 
-  color:var(--gold2);
+  position:absolute;
 
-  font-size:22px;
+  width:11px;
+  height:11px;
+
+  background:#d8b96b;
+  border-radius:50%;
+
+  top:80px;
+  right:95px;
+
+  box-shadow:0 0 30px #d8b96b;
+
+  animation:orbit 9s linear infinite;
 }
 
-.hero-stat span{
-  color:#798496;
+@keyframes orbit{
+  from{
+    transform:rotate(0deg) translateX(230px) rotate(0deg);
+  }
 
-  font-size:10px;
-
-  text-transform:uppercase;
-  letter-spacing:.13em;
+  to{
+    transform:rotate(360deg) translateX(230px) rotate(-360deg);
+  }
 }
 
-@media(max-width:600px){
+@media(max-width:800px){
 
-  .hero-stats{
-    gap:20px;
-    flex-wrap:wrap;
+  .hero-art{
+    width:400px;
+    height:400px;
+    right:-230px;
+    opacity:.5;
   }
 
 }
 
-/* =========================================================
+/* =========================
    MARQUEE
-========================================================= */
+========================= */
 
 .marquee{
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
 
   overflow:hidden;
+  white-space:nowrap;
 
   padding:17px 0;
 
-  white-space:nowrap;
-
-  color:#687386;
-
-  text-transform:uppercase;
-  letter-spacing:.22em;
+  color:#687184;
 
   font-size:10px;
-  font-weight:850;
+  font-weight:800;
 
-  background:rgba(255,255,255,.012);
+  letter-spacing:.25em;
 }
 
 .marquee-track{
   display:inline-block;
-
-  animation:scroll 28s linear infinite;
+  animation:marquee 25s linear infinite;
 }
 
-@keyframes scroll{
+@keyframes marquee{
   from{
     transform:translateX(0);
   }
-
   to{
     transform:translateX(-50%);
   }
 }
 
-/* =========================================================
+/* =========================
    ABOUT
-========================================================= */
+========================= */
 
 .about-grid{
   display:grid;
-
-  grid-template-columns:.75fr 1.4fr;
-
+  grid-template-columns:.8fr 1.5fr;
   gap:90px;
-
-  align-items:start;
 }
 
-.about-number{
-  font-size:170px;
+.big-letter{
+  font-size:190px;
+  line-height:.6;
 
-  line-height:.65;
+  font-weight:900;
 
-  font-weight:950;
-
-  color:rgba(217,184,108,.08);
-
-  user-select:none;
+  color:rgba(216,185,107,.07);
 }
 
-.about-copy{
-  color:var(--muted);
-
+.about-text{
+  color:#aeb5c3;
   font-size:17px;
+  line-height:1.9;
 }
 
-.about-copy p{
-  margin-bottom:19px;
+.about-text p{
+  margin-bottom:18px;
 }
 
-.about-highlight{
-  margin-top:35px;
+.quote{
+  margin-top:30px;
 
-  padding:22px 24px;
+  border-left:2px solid #d8b96b;
 
-  border-left:2px solid var(--gold);
+  padding:17px 20px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(217,184,108,.06),
-      transparent
-    );
+  background:linear-gradient(
+    90deg,
+    rgba(216,185,107,.06),
+    transparent
+  );
 
-  color:#d7dce4;
+  color:#dfe2e8;
 
   font-size:15px;
 }
@@ -677,779 +474,979 @@ section{
 
   .about-grid{
     grid-template-columns:1fr;
-    gap:30px;
+    gap:35px;
   }
 
-  .about-number{
-    font-size:100px;
+  .big-letter{
+    font-size:120px;
   }
 
 }
 
-/* =========================================================
-   CARDS
-========================================================= */
+/* =========================
+   GLASS
+========================= */
 
-.glass-card{
-  border:1px solid var(--line);
-
-  border-radius:22px;
-
+.glass{
   background:
     linear-gradient(
       145deg,
-      rgba(255,255,255,.045),
+      rgba(255,255,255,.055),
       rgba(255,255,255,.012)
     );
 
+  border:1px solid rgba(255,255,255,.09);
+
   backdrop-filter:blur(15px);
 
-  box-shadow:var(--shadow);
-
-  transition:.35s ease;
-}
-
-.glass-card:hover{
-  transform:translateY(-6px);
-
-  border-color:rgba(217,184,108,.25);
+  border-radius:24px;
 
   box-shadow:
-    0 30px 90px rgba(0,0,0,.42);
+    0 25px 80px rgba(0,0,0,.25);
+
+  transition:.35s;
 }
 
-/* =========================================================
-   EVENTS
-========================================================= */
-
-.events{
-  background:
-    radial-gradient(
-      circle at 85% 50%,
-      rgba(82,111,168,.08),
-      transparent 30%
-    );
+.glass:hover{
+  transform:translateY(-6px);
+  border-color:rgba(216,185,107,.25);
 }
 
-.event-card{
+/* =========================
+   FEATURE
+========================= */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+
+  margin-top:50px;
+}
+
+.feature{
+  padding:32px;
+  min-height:230px;
+}
+
+.number{
+  color:#d8b96b;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.feature h3{
+  font-size:21px;
+  margin:30px 0 10px;
+}
+
+.feature p{
+  color:#9da6b6;
+  font-size:14px;
+  line-height:1.7;
+}
+
+@media(max-width:800px){
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* =========================
+   EVENT
+========================= */
+
+.event{
+  padding:55px;
+
   position:relative;
-
   overflow:hidden;
 
-  margin-top:45px;
-
-  padding:48px;
-
-  border:1px solid rgba(217,184,108,.22);
-
-  border-radius:27px;
-
   background:
     radial-gradient(
-      circle at 90% 5%,
-      rgba(217,184,108,.14),
-      transparent 27%
+      circle at 85% 10%,
+      rgba(216,185,107,.15),
+      transparent 28%
     ),
     radial-gradient(
-      circle at 10% 100%,
-      rgba(82,111,168,.10),
+      circle at 15% 90%,
+      rgba(74,91,180,.12),
       transparent 30%
     ),
-    linear-gradient(
-      135deg,
-      #121d2d,
-      #0a111d
-    );
-
-  box-shadow:
-    0 30px 100px rgba(0,0,0,.25);
+    #0b1020;
 }
 
-.event-card::after{
-  content:"2026";
-
+.event-year{
   position:absolute;
 
-  right:-25px;
-  bottom:-45px;
+  right:-20px;
+  bottom:-55px;
 
-  font-size:150px;
-
-  font-weight:950;
+  font-size:170px;
+  font-weight:900;
 
   color:rgba(255,255,255,.025);
 }
 
-.event-top{
-  display:flex;
-
-  justify-content:space-between;
-
-  gap:20px;
-
-  margin-bottom:30px;
-}
-
-.status{
-  padding:6px 12px;
-
-  border:1px solid rgba(217,184,108,.35);
-
-  border-radius:999px;
-
-  color:var(--gold2);
-
-  font-size:9px;
-  font-weight:900;
-
-  letter-spacing:.13em;
-}
-
-.event-card h3{
+.event h3{
   position:relative;
   z-index:2;
 
-  font-size:clamp(38px,6vw,72px);
-
-  line-height:.92;
+  font-size:clamp(40px,6vw,72px);
+  line-height:.9;
 
   letter-spacing:-.06em;
 
-  margin-bottom:20px;
+  margin:18px 0;
 }
 
-.event-card p{
+.event h3 span{
+  color:#d8b96b;
+}
+
+.event p{
   position:relative;
   z-index:2;
 
   max-width:680px;
 
-  color:var(--muted);
+  color:#aab2c1;
 
   font-size:16px;
+  line-height:1.8;
 }
 
-.event-meta{
+.pills{
   display:flex;
   flex-wrap:wrap;
+  gap:8px;
 
-  gap:9px;
-
-  margin:27px 0;
+  margin:25px 0;
 }
 
-.meta{
+.pill{
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:50px;
+
   padding:7px 13px;
 
-  border:1px solid var(--line);
+  color:#bdc4d0;
 
-  border-radius:999px;
-
-  color:#c4cbd5;
-
-  font-size:11px;
-
-  background:rgba(255,255,255,.018);
+  font-size:10px;
 }
 
 @media(max-width:600px){
-
-  .event-card{
-    padding:30px;
+  .event{
+    padding:32px;
   }
-
-  .event-top{
-    flex-direction:column;
-  }
-
 }
 
-/* =========================================================
+/* =========================
    MUN
-========================================================= */
+========================= */
 
-.mun{
-  overflow:hidden;
-}
-
-.mun-card{
-  position:relative;
-
-  overflow:hidden;
-
+.mun-box{
   margin-top:50px;
 
   padding:60px;
 
-  border:1px solid rgba(217,184,108,.25);
+  position:relative;
+  overflow:hidden;
 
+  border:1px solid rgba(216,185,107,.25);
   border-radius:30px;
 
   background:
     radial-gradient(
       circle at 80% 20%,
-      rgba(217,184,108,.15),
-      transparent 27%
+      rgba(216,185,107,.15),
+      transparent 30%
     ),
     radial-gradient(
       circle at 20% 90%,
-      rgba(82,111,168,.15),
+      rgba(75,91,174,.15),
       transparent 35%
     ),
-    linear-gradient(
-      135deg,
-      #0d1625,
-      #080e18
-    );
-
-  box-shadow:
-    0 40px 100px rgba(0,0,0,.30);
+    #090f1d;
 }
 
-.mun-card::before{
-  content:"";
+.mun-box:after{
+  content:"S";
 
   position:absolute;
 
-  width:350px;
-  height:350px;
+  right:40px;
+  bottom:-70px;
 
-  right:-160px;
-  top:-160px;
+  font-size:300px;
 
-  border:1px solid rgba(217,184,108,.12);
+  font-weight:900;
 
-  border-radius:50%;
-
-  box-shadow:
-    0 0 0 55px rgba(217,184,108,.025),
-    0 0 0 110px rgba(217,184,108,.018);
+  color:rgba(216,185,107,.035);
 }
 
-.mun-header{
+.mun-top{
+  position:relative;
+  z-index:2;
+
   display:flex;
-
   justify-content:space-between;
-  align-items:flex-start;
-
   gap:30px;
-
-  margin-bottom:45px;
 }
 
 .mun-title{
-  font-size:clamp(48px,7vw,88px);
+  font-size:clamp(50px,8vw,95px);
 
-  line-height:.88;
+  line-height:.85;
 
-  letter-spacing:-.07em;
+  letter-spacing:-.08em;
 
   margin-top:15px;
 }
 
 .mun-title span{
-  color:var(--gold);
-}
-
-.coming{
-  display:inline-block;
-
-  margin-top:20px;
-
-  color:var(--gold2);
-
-  text-transform:uppercase;
-
-  letter-spacing:.2em;
-
-  font-size:10px;
-
-  font-weight:900;
+  color:#d8b96b;
 }
 
 .mun-symbol{
-  width:92px;
-  height:92px;
+  width:85px;
+  height:85px;
 
-  flex:none;
+  border:1px solid rgba(216,185,107,.5);
+  border-radius:50%;
 
   display:grid;
   place-items:center;
 
-  border-radius:50%;
+  color:#d8b96b;
 
-  border:1px solid rgba(217,184,108,.55);
+  font-size:30px;
+  font-weight:900;
 
-  color:var(--gold);
-
-  font-size:31px;
-  font-weight:950;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(217,184,108,.08),
-      transparent 65%
-    );
-
-  box-shadow:
-    0 0 45px rgba(217,184,108,.06);
+  flex:none;
 }
 
-.mun-description{
+.mun-text{
   position:relative;
   z-index:2;
 
-  max-width:780px;
+  max-width:760px;
 
-  color:var(--muted);
+  margin-top:40px;
 
-  font-size:18px;
+  color:#aab2c1;
+
+  font-size:17px;
+  line-height:1.8;
 }
 
-.mun-tags{
-  display:flex;
-  flex-wrap:wrap;
+@media(max-width:650px){
 
-  gap:9px;
-
-  margin-top:30px;
-}
-
-.mun-tag{
-  padding:8px 14px;
-
-  border-radius:999px;
-
-  background:rgba(255,255,255,.035);
-
-  border:1px solid var(--line);
-
-  color:#cbd1db;
-
-  font-size:11px;
-}
-
-@media(max-width:700px){
-
-  .mun-card{
+  .mun-box{
     padding:32px;
   }
 
-  .mun-header{
+  .mun-top{
     flex-direction:column;
   }
 
 }
 
-/* =========================================================
-   WHY SUTRA
-========================================================= */
+/* =========================
+   RESOURCES
+========================= */
 
-.why-grid{
+.resources-grid{
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:15px;
 
-  margin-top:50px;
+  margin-top:45px;
 }
 
-.why-card{
-  padding:32px;
-
-  min-height:230px;
+.resource{
+  padding:30px;
 }
 
-.card-number{
-  color:var(--gold);
+.resource-icon{
+  font-size:28px;
+  color:#d8b96b;
+  margin-bottom:25px;
+}
+
+.resource h3{
+  font-size:19px;
+  margin-bottom:10px;
+}
+
+.resource p{
+  color:#9da6b6;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.resource a{
+  display:inline-block;
+
+  margin-top:22px;
+
+  color:#e2c982;
 
   font-size:10px;
   font-weight:900;
 
-  letter-spacing:.15em;
-}
-
-.why-card h3{
-  margin:30px 0 10px;
-
-  font-size:21px;
-}
-
-.why-card p{
-  color:var(--muted);
-
-  font-size:14px;
-}
-
-@media(max-width:800px){
-
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-/* =========================================================
-   ROLES
-========================================================= */
-
-.roles-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:15px;
-
-  margin-top:48px;
-}
-
-.role-card{
-  padding:30px;
-
-  min-height:200px;
-}
-
-.role-icon{
-  color:var(--gold);
-
-  font-size:27px;
-
-  margin-bottom:25px;
-}
-
-.role-card h3{
-  font-size:19px;
-
-  margin-bottom:8px;
-}
-
-.role-card p{
-  color:var(--muted);
-
-  font-size:13px;
-}
-
-@media(max-width:850px){
-
-  .roles-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media(max-width:550px){
-
-  .roles-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-/* =========================================================
-   RESOURCES
-========================================================= */
-
-.resources{
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(82,111,168,.045),
-      transparent
-    );
-}
-
-.resource-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:15px;
-
-  margin-top:48px;
-}
-
-.resource-card{
-  padding:30px;
-
-  position:relative;
-}
-
-.resource-card::before{
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:30px;
-  right:30px;
-
-  height:1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
-
-  opacity:.5;
-}
-
-.resource-icon{
-  font-size:27px;
-
-  margin:10px 0 25px;
-
-  color:var(--gold);
-}
-
-.resource-card h3{
-  font-size:19px;
-
-  margin-bottom:9px;
-}
-
-.resource-card p{
-  color:var(--muted);
-
-  font-size:13px;
-
-  margin-bottom:20px;
-}
-
-.resource-link{
-  color:var(--gold2);
-
-  font-size:11px;
-
-  font-weight:850;
-
-  letter-spacing:.08em;
-
+  letter-spacing:.1em;
   text-transform:uppercase;
 }
 
 @media(max-width:800px){
 
-  .resource-grid{
+  .resources-grid{
     grid-template-columns:1fr;
   }
 
 }
 
-/* =========================================================
-   ASK SUTRA
-========================================================= */
-
-.ask{
-  padding-top:80px;
-}
-
-.ask-card{
-  display:grid;
-
-  grid-template-columns:1fr 1.5fr;
-
-  gap:50px;
-
-  padding:50px;
-
-  border-radius:28px;
-
-  background:
-    radial-gradient(
-      circle at 10% 20%,
-      rgba(217,184,108,.13),
-      transparent 28%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.045),
-      rgba(255,255,255,.012)
-    );
-
-  border:1px solid var(--line);
-}
-
-.ask-big{
-  font-size:clamp(45px,6vw,72px);
-
-  line-height:.9;
-
-  letter-spacing:-.065em;
-}
-
-.ask-big span{
-  color:var(--gold);
-}
-
-.ask-copy{
-  color:var(--muted);
-
-  font-size:16px;
-}
-
-.ask-question{
-  margin-top:25px;
-
-  padding:18px 20px;
-
-  border:1px solid rgba(217,184,108,.2);
-
-  border-radius:13px;
-
-  background:rgba(217,184,108,.035);
-
-  color:#dce0e7;
-
-  font-size:14px;
-}
-
-@media(max-width:750px){
-
-  .ask-card{
-    grid-template-columns:1fr;
-
-    padding:32px;
-
-    gap:25px;
-  }
-
-}
-
-/* =========================================================
+/* =========================
    COMMUNITY
-========================================================= */
+========================= */
 
 .community{
   text-align:center;
 }
 
-.community-card{
-  padding:65px 35px;
-
+.community-box{
   margin-top:45px;
 
-  border-radius:30px;
-
-  border:1px solid rgba(217,184,108,.20);
+  padding:70px 35px;
 
   background:
     radial-gradient(
       circle at center,
-      rgba(217,184,108,.09),
+      rgba(216,185,107,.1),
       transparent 45%
-    ),
-    rgba(255,255,255,.015);
+    );
+
+  border:1px solid rgba(216,185,107,.2);
+  border-radius:30px;
 }
 
-.community-title{
-  font-size:clamp(42px,7vw,80px);
+.community-box h2{
+  font-size:clamp(45px,7vw,85px);
 
-  line-height:.9;
+  line-height:.88;
 
-  letter-spacing:-.07em;
-
-  margin:15px auto 22px;
+  letter-spacing:-.075em;
 }
 
-.community-title span{
-  color:var(--gold);
+.community-box h2 span{
+  color:#d8b96b;
 }
 
-.community-card p{
+.community-box p{
   max-width:650px;
 
-  margin:0 auto 30px;
+  margin:25px auto 30px;
 
-  color:var(--muted);
+  color:#a9b1c0;
 
-  font-size:17px;
+  line-height:1.8;
 }
 
-/* =========================================================
+/* =========================
    AMBASSADOR
-========================================================= */
+========================= */
 
-.ambassador-grid{
+.ambassador{
   display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:15px;
 
-  grid-template-columns:1.2fr .8fr;
-
-  gap:20px;
-
-  margin-top:48px;
+  margin-top:45px;
 }
 
-.ambassador-main{
-  padding:45px;
+.ambassador-main,
+.ambassador-side{
+  padding:40px;
 }
 
 .ambassador-main h3{
-  font-size:34px;
-
+  font-size:38px;
   line-height:1;
 
   margin:15px 0;
 }
 
 .ambassador-main h3 span{
-  color:var(--gold);
+  color:#d8b96b;
 }
 
 .ambassador-main p{
-  color:var(--muted);
-
-  max-width:650px;
+  color:#a5adbb;
+  line-height:1.8;
 }
 
 .ambassador-list{
   display:grid;
+  gap:9px;
 
-  gap:10px;
-
-  margin-top:28px;
+  margin-top:25px;
 }
 
-.ambassador-item{
-  padding:13px 15px;
+.ambassador-list div{
+  padding:12px 15px;
 
-  border:1px solid var(--line);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
 
-  border-radius:11px;
-
-  color:#cdd3dc;
+  color:#c6ccd6;
 
   font-size:13px;
 }
 
-.ambassador-item::before{
+.ambassador-list div:before{
   content:"✦";
-
-  color:var(--gold);
-
-  margin-right:9px;
+  color:#d8b96b;
+  margin-right:8px;
 }
 
 .ambassador-side{
-  padding:35px;
-
   display:flex;
-
   flex-direction:column;
-
   justify-content:space-between;
 }
 
 .ambassador-side strong{
   display:block;
 
-  color:var(--gold2);
+  font-size:34px;
 
-  font-size:30px;
+  color:#e5cf96;
+}
 
-  line-heigh              
+.ambassador-side small{
+  color:#8993a4;
+}
+
+@media(max-width:800px){
+
+  .ambassador{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* =========================
+   FOUNDERS
+========================= */
+
+.founders-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  max-width:850px;
+
+  gap:15px;
+
+  margin-top:45px;
+}
+
+.founder{
+  padding:45px 25px;
+  text-align:center;
+}
+
+.founder-circle{
+  width:75px;
+  height:75px;
+
+  margin:0 auto 22px;
+
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid #d8b96b;
+
+  color:#d8b96b;
+
+  font-size:25px;
+  font-weight:900;
+}
+
+.founder h3{
+  font-size:22px;
+}
+
+.founder p{
+  color:#d8b96b;
+
+  font-size:10px;
+  font-weight:900;
+
+  letter-spacing:.15em;
+
+  margin-top:5px;
+}
+
+@media(max-width:600px){
+
+  .founders-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+  max-width:850px;
+  margin-top:45px;
+}
+
+details{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:20px 0;
+}
+
+details:last-child{
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+summary{
+  cursor:pointer;
+
+  list-style:none;
+
+  display:flex;
+  justify-content:space-between;
+
+  color:#e7e8ec;
+
+  font-size:15px;
+  font-weight:700;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary:after{
+  content:"+";
+  color:#d8b96b;
+  font-size:20px;
+}
+
+details[open] summary:after{
+  content:"−";
+}
+
+details p{
+  color:#9ea7b7;
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  margin-top:15px;
+
+  max-width:700px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.final{
+  text-align:center;
+
+  padding:150px 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(216,185,107,.12),
+      transparent 40%
+    );
+
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.final h2{
+  font-size:clamp(50px,8vw,100px);
+
+  line-height:.85;
+
+  letter-spacing:-.08em;
+
+  margin:15px 0 25px;
+}
+
+.final h2 span{
+  color:#d8b96b;
+}
+
+.final p{
+  color:#a8b0bf;
+
+  max-width:600px;
+
+  margin:0 auto 30px;
+
+  line-height:1.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:45px 0;
+
+  color:#687285;
+
+  font-size:11px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.footer-brand{
+  color:#f5f1e8;
+
+  font-weight:900;
+
+  letter-spacing:.18em;
+}
+
+.footer-brand span{
+  color:#d8b96b;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+
+.footer-links a:hover{
+  color:#d8b96b;
+}
+
+@media(max-width:650px){
+
+  .footer{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+
+  animation:reveal 1s ease forwards;
+}
+
+.delay1{
+  animation-delay:.15s;
+}
+
+.delay2{
+  animation-delay:.3s;
+}
+
+@keyframes reveal{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+
+<!-- =========================
+     NAV
+========================= -->
+
+<nav>
+
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      SUTRA <span>SUMMITS</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#mun">MUN</a>
+      <a href="#resources">Resources</a>
+      <a href="#community">Community</a>
+    </div>
+
+    <a href="#join" class="nav-button">
+      JOIN SUTRA
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="home">
+
+  <div class="hero-art"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-badge reveal">
+      <i></i>
+      Debate · Diplomacy · Leadership
+    </div>
+
+    <h1 class="reveal delay1">
+      Ideas.<br>
+      <span class="gold">Influence.</span><br>
+      Impact.
+    </h1>
+
+    <p class="hero-sub reveal delay2">
+      Sutra Summits is a student-led platform where
+      ambitious young minds debate, negotiate, lead
+      and engage with ideas that matter.
+    </p>
+
+    <div class="buttons reveal delay2">
+
+      <a href="#events" class="btn">
+        Explore Events
+      </a>
+
+      <a href="#mun" class="btn secondary">
+        Discover SUTRA MUN
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     MARQUEE
+========================= -->
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    SUTRA SUMMITS · DEBATE · DIPLOMACY · LEADERSHIP ·
+    MODEL UNITED NATIONS · PUBLIC SPEAKING · CRITICAL THINKING ·
+    SUTRA SUMMITS · DEBATE · DIPLOMACY · LEADERSHIP ·
+    MODEL UNITED NATIONS · PUBLIC SPEAKING · CRITICAL THINKING ·
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div>
+
+        <div class="label">
+          01 — The Organization
+        </div>
+
+        <div class="big-letter">
+          S
+        </div>
+
+      </div>
+
+
+      <div class="about-text">
+
+        <h2 class="title">
+          Where ideas meet
+          <span>influence.</span>
+        </h2>
+
+        <p>
+          <strong>Sutra Summits</strong> is a student-led
+          organization creating platforms for debate,
+          diplomacy, Model United Nations and meaningful
+          discussion.
+        </p>
+
+        <p>
+          We believe that strong leadership begins with
+          curiosity — the willingness to question,
+          research, listen and speak with purpose.
+        </p>
+
+        <p>
+          From competitive debate to diplomatic
+          simulations, Sutra aims to create experiences
+          where young people can develop the confidence
+          to express ideas and the discipline to defend them.
+        </p>
+
+        <div class="quote">
+          Great ideas deserve a room.
+          Great voices deserve to be heard.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHY SUTRA
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="label">
+      02 — The Sutra Difference
+    </div>
+
+    <h2 class="title">
+      Think. Speak.<br>
+      <span>Lead.</span>
+    </h2>
+
+    <p class="description">
+      We are building experiences that go beyond
+      simply attending a conference.
+    </p>
+
+
+    <div class="feature-grid">
+
+      <div class="glass feature">
+
+        <div class="number">
+          01 — THINK
+        </div>
+
+        <h3>Critical Thinking</h3>
+
+        <p>
+          Question assumptions, research deeply and
+          approach complex issues from multiple
+          perspectives.
+        </p>
+
+      </div>
+
+
+      <div class="glass feature">
+
+        <div class="number">
+          02 — SPEAK
+        </div>
+
+        <h3>Powerful Communication</h3>
+
+        <p>
+          Learn to express arguments with clarity,
+          confidence and purpose.
+        </p>
+
+      </div>
+
+
+      <div class="glass feature">
+
+        <div class="number">
+          03 — LEAD
+        </div>
+
+        <h3>Leadership</h3>
+
+        <p>
+          Negotiate, make decisions, collaborate and
+          influence the room through ideas.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     EVENTS
+========================= -->
+
+<section id="events">
+
+  <div class="container">
+
+    <div class="label">
+      03 — Upcoming
+    </div>
+
+    <h2 class="title">
+      The next argument<br>
+      <span>starts here.</span>
+    </h2>
+
+    <p class="description">
+      Discover upcoming Sutra competitions and
+      experiences designed for students who want
+      to challenge themselves.
+    </p>
+
+
+    <div 
