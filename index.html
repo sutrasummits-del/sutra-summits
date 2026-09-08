@@ -8,7 +8,7 @@
 <title>SUTRA SUMMITS — Debate, Diplomacy & Leadership</title>
 
 <meta name="description"
-content="Sutra Summits is a student-led debate and Model United Nations organization creating platforms for debate, diplomacy, leadership, critical thinking and meaningful discussion.">
+content="Sutra Summits is a student-led debate and Model United Nations organization creating platforms for debate, diplomacy, leadership, critical thinking and meaningful discussion. Founded by Shivansh Dixit with Saanvi Thakur as Co-Founder.">
 
 <meta name="google-site-verification"
 content="A4QSv9OUty88qHCiNmmScTEHMHNTPFhLvuozlARPUbY" />
@@ -16,14 +16,16 @@ content="A4QSv9OUty88qHCiNmmScTEHMHNTPFhLvuozlARPUbY" />
 <meta property="og:site_name" content="Sutra Summits">
 <meta property="og:title" content="Sutra Summits — Debate, Diplomacy & Leadership">
 <meta property="og:description"
-content="A student-led platform for debate, diplomacy, leadership and meaningful discussion.">
+content="A student-led platform for debate, diplomacy, leadership and meaningful discussion. Founded by Shivansh Dixit with Saanvi Thakur as Co-Founder.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sutra-summits.vercel.app/">
 
+<!-- GOOGLE / SEO ORGANIZATION STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://sutra-summits.vercel.app/#organization",
   "name": "Sutra Summits",
   "alternateName": "SUTRA SUMMITS",
   "url": "https://sutra-summits.vercel.app/",
@@ -31,24 +33,30 @@ content="A student-led platform for debate, diplomacy, leadership and meaningful
   "founder": [
     {
       "@type": "Person",
+      "@id": "https://sutra-summits.vercel.app/#shivansh-dixit",
       "name": "Shivansh Dixit"
     },
     {
       "@type": "Person",
+      "@id": "https://sutra-summits.vercel.app/#saanvi-thakur",
       "name": "Saanvi Thakur"
     }
-  ],
-  "sameAs": []
+  ]
 }
 </script>
 
+<!-- WEBSITE STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://sutra-summits.vercel.app/#website",
   "name": "Sutra Summits",
   "alternateName": "SUTRA SUMMITS",
-  "url": "https://sutra-summits.vercel.app/"
+  "url": "https://sutra-summits.vercel.app/",
+  "publisher": {
+    "@id": "https://sutra-summits.vercel.app/#organization"
+  }
 }
 </script>
 
@@ -357,6 +365,13 @@ section{
 
 .about-copy p{
   margin-bottom:18px;
+}
+
+.founder-statement{
+  color:var(--text);
+  border-left:2px solid var(--gold);
+  padding-left:18px;
+  margin-top:25px;
 }
 
 @media(max-width:800px){
@@ -707,6 +722,11 @@ footer{
   color:var(--gold);
 }
 
+.footer-founders{
+  margin-top:8px;
+  color:#7f8a9a;
+}
+
 @media(max-width:600px){
   .footer-inner{
     flex-direction:column;
@@ -725,6 +745,7 @@ footer{
     opacity:0;
     transform:translateY(25px);
   }
+
   to{
     opacity:1;
     transform:translateY(0);
@@ -780,6 +801,7 @@ footer{
     </p>
 
     <div class="buttons">
+
       <a class="btn" href="#events">
         Explore Events
       </a>
@@ -787,6 +809,7 @@ footer{
       <a class="btn btn-outline" href="#mun">
         Discover SUTRA MUN
       </a>
+
     </div>
 
   </div>
@@ -814,8 +837,15 @@ footer{
     <div class="about-grid">
 
       <div>
-        <div class="eyebrow">01 — The Organization</div>
-        <div class="about-number">S</div>
+
+        <div class="eyebrow">
+          01 — The Organization
+        </div>
+
+        <div class="about-number">
+          S
+        </div>
+
       </div>
 
       <div class="about-copy">
@@ -844,6 +874,13 @@ footer{
           purpose.
         </p>
 
+        <p class="founder-statement">
+          <strong>
+            Sutra Summits was founded by Shivansh Dixit,
+            with Saanvi Thakur as Co-Founder.
+          </strong>
+        </p>
+
       </div>
 
     </div>
@@ -859,7 +896,9 @@ footer{
 
   <div class="container">
 
-    <div class="eyebrow">02 — Upcoming</div>
+    <div class="eyebrow">
+      02 — Upcoming
+    </div>
 
     <h2 class="section-title">
       The next argument<br>
@@ -872,9 +911,7 @@ footer{
       official event details.
     </p>
 
-
     <div style="height:40px"></div>
-
 
     <div class="event-card">
 
@@ -902,10 +939,23 @@ footer{
       </p>
 
       <div class="event-meta">
-        <span class="meta">Online</span>
-        <span class="meta">Competitive Debate</span>
-        <span class="meta">2026</span>
-        <span class="meta">Registration Soon</span>
+
+        <span class="meta">
+          Online
+        </span>
+
+        <span class="meta">
+          Competitive Debate
+        </span>
+
+        <span class="meta">
+          2026
+        </span>
+
+        <span class="meta">
+          Registration Soon
+        </span>
+
       </div>
 
       <a class="btn" href="#home">
@@ -925,7 +975,9 @@ footer{
 
   <div class="container">
 
-    <div class="eyebrow">03 — A New Chapter</div>
+    <div class="eyebrow">
+      03 — A New Chapter
+    </div>
 
     <h2 class="section-title">
       Sutra enters<br>
@@ -937,6 +989,7 @@ footer{
       <div class="mun-header">
 
         <div>
+
           <div class="eyebrow">
             Model United Nations
           </div>
@@ -949,6 +1002,7 @@ footer{
           <div class="coming">
             Launching Soon
           </div>
+
         </div>
 
         <div class="mun-symbol">
@@ -977,7 +1031,9 @@ footer{
 
   <div class="container">
 
-    <div class="eyebrow">04 — The MUN Room</div>
+    <div class="eyebrow">
+      04 — The MUN Room
+    </div>
 
     <h2 class="section-title">
       Every role has<br>
@@ -990,61 +1046,101 @@ footer{
       to create a structured and engaging experience.
     </p>
 
-
     <div class="roles-grid">
 
       <div class="role-card">
+
         <div class="role-icon">♛</div>
-        <h3>Prime Minister</h3>
+
+        <h3>
+          Prime Minister
+        </h3>
+
         <p>
           Lead the government, establish its direction
           and defend its central position.
         </p>
+
       </div>
 
+
       <div class="role-card">
+
         <div class="role-icon">◆</div>
-        <h3>Deputy Prime Minister</h3>
+
+        <h3>
+          Deputy Prime Minister
+        </h3>
+
         <p>
           Support the Prime Minister, strengthen the
           government's case and respond to opposition.
         </p>
+
       </div>
 
+
       <div class="role-card">
+
         <div class="role-icon">◈</div>
-        <h3>Government</h3>
+
+        <h3>
+          Government
+        </h3>
+
         <p>
           Build a coherent case, defend policy and
           persuade the room through strategy.
         </p>
+
       </div>
 
+
       <div class="role-card">
+
         <div class="role-icon">⚔</div>
-        <h3>Opposition</h3>
+
+        <h3>
+          Opposition
+        </h3>
+
         <p>
           Challenge the government's position and
           present a compelling alternative.
         </p>
+
       </div>
 
+
       <div class="role-card">
+
         <div class="role-icon">◎</div>
-        <h3>Delegates</h3>
+
+        <h3>
+          Delegates
+        </h3>
+
         <p>
           Represent assigned positions, negotiate,
           research and engage in diplomatic discussion.
         </p>
+
       </div>
 
+
       <div class="role-card">
+
         <div class="role-icon">⚖</div>
-        <h3>Executive Board</h3>
+
+        <h3>
+          Executive Board
+        </h3>
+
         <p>
           Guide proceedings, evaluate performance and
           maintain the standard of the summit.
         </p>
+
       </div>
 
     </div>
@@ -1060,7 +1156,9 @@ footer{
 
   <div class="container">
 
-    <div class="eyebrow">05 — What We Stand For</div>
+    <div class="eyebrow">
+      05 — What We Stand For
+    </div>
 
     <h2 class="section-title">
       More than a<br>
@@ -1070,84 +1168,10 @@ footer{
     <div class="values-grid">
 
       <div class="value">
-        <div class="value-number">01</div>
-        <h3>Critical Thinking</h3>
-        <p>
-          Question assumptions and think beyond the obvious.
-        </p>
-      </div>
 
-      <div class="value">
-        <div class="value-number">02</div>
-        <h3>Communication</h3>
-        <p>
-          Express complex ideas with clarity and confidence.
-        </p>
-      </div>
-
-      <div class="value">
-        <div class="value-number">03</div>
-        <h3>Leadership</h3>
-        <p>
-          Take responsibility, make decisions and influence.
-        </p>
-      </div>
-
-      <div class="value">
-        <div class="value-number">04</div>
-        <h3>Diplomacy</h3>
-        <p>
-          Understand opposing perspectives and find common ground.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FOUNDERS -->
-
-<section class="founders" id="founders">
-
-  <div class="container">
-
-    <div class="eyebrow">06 — The Founders</div>
-
-    <h2 class="section-title">
-      The minds behind<br>
-      <span class="gold">Sutra.</span>
-    </h2>
-
-    <div class="founders-grid">
-
-      <div class="founder-card">
-
-        <div class="founder-mark">
-          S
+        <div class="value-number">
+          01
         </div>
 
         <h3>
-          Shivansh Dixit
-        </h3>
-
-        <div class="founder-role">
-          FOUNDER
-        
-<div class="founder-card">
-
-  <div class="founder-mark">
-    S
-  </div>
-
-  <h3>
-    Saanvi Thakur
-  </h3>
-
-  <div class="founder-role">
-    CO-FOUNDER
-  </div>
-
-</div>
+          Crit                  
